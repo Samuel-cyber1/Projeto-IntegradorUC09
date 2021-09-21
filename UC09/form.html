@@ -12,7 +12,7 @@
 </head>
 <body class="body1">
     <div class="conteudoForm">
-            <form action="" class="formulario">
+            <form  action="json.html" method="GET" class="formulario">
    
                         <label >Nome</label>
                         <input type="text" id="nome" placeholder="Digite seu nome completo">
@@ -29,15 +29,15 @@
 
                 <label >Endereço:</label>
                 <input type="text" id="rua"  placeholder="Rua, avenida e etc">
-                <input type="text" id="numero"  placeholder="Numero"  onblur="vFormulario();">
+                <input type="text" id="numero"  placeholder="Numero" onblur="vFormulario();"  >
                 <input type="text" id="bairro"  placeholder="Bairro">
                 <input type="text" id="cidade"  placeholder="cidade">
                 <input type="text" id="uf"  placeholder="Estado" >
 
-                <input type="submit" value="Cadastrar" class="buttonClass" id="vButton" onclick="gJson();" >
-     
-                
-         
+  <input type="text" name="vJson" id="Json" hidden />
+
+                   <input type="submit" value="Cadastrar" class="buttonClass" id="vButton" onclick="gJson();" disabled >
+    
             </form>
            
 </div>

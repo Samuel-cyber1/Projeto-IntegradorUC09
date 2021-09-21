@@ -1,15 +1,3 @@
-var    vNome   =   document.getElementById("nome").value;
-var   vTelefone =  document.getElementById("telefone").value;
-var   vCPF  =  document.getElementById("cpf").value;
-var  vCEP  =  document.getElementById("cep").value;
-var   vRua  =  document.getElementById("rua").value;
-var  vNumero  =  document.getElementById("numero").value;
-var  vBairro  =  document.getElementById("bairro").value;
-var vUf  =  document.getElementById("uf").value;
-
-
-
-
 function gJson()  {
 
     var  objeto_formulario  = {
@@ -23,7 +11,6 @@ function gJson()  {
                     uf: "",
                 }
 
-
 objeto_formulario.nome = document.getElementById("nome").value;
 objeto_formulario.telefone = document.getElementById("telefone").value;
 objeto_formulario.cpf = document.getElementById("cpf").value;
@@ -35,8 +22,14 @@ objeto_formulario.uf  =  document.getElementById("uf").value;
 
 var vJson = JSON.stringify(objeto_formulario);
 
-document.getElementById("Json").innerHTML = vJson;
+document.getElementById("Json").value = vJson;
+
+}
 
 
+function exibeJson() {
 
+    var urlJson = new URLSearchParams(location.search);
+
+    document.getElementById("Json").innerHTML =  urlJson.get("vJson");
 }

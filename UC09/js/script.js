@@ -77,8 +77,9 @@ function vFormulario() {
     var  vNumero = document.getElementById("numero").value;
     var  vBairro = document.getElementById("bairro").value;
     var    vUf = document.getElementById("uf").value;
+    
     var   vResultado = false;
-
+  
 
     if (vNome.length >= 10 && vNome.length <= 80) {
         if (vTelefone.length >= 8 && vTelefone.length <= 11) {
@@ -88,10 +89,9 @@ function vFormulario() {
                         if (vNumero != "") {
                             if (vBairro != "") {
                                 if (vUf != "") {
-                                    var vResultado = true;
-                                    document.getElementById("vButton").disabled = true;
-                                    
-
+                                       var   vResultado  =  true;
+                                       document.getElementById("vButton").disabled = false; 
+      
                                 } else {
                                     var vResultado = false;
                                 }
@@ -125,12 +125,9 @@ function vFormulario() {
     } 
 
 
- if (vResultado == true) {
-     vResultado = alert ("Obrigado")
- } else {
-    var  vResultado = false;
+ if (vResultado == true) {          
+     vResultado = alert ("Formulari0 validado")
+ } else if (vResultado == false) {
+    alert ("Formulario invalido")
 } 
-
-
-
 }
